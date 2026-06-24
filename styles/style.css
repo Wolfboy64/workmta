@@ -103,3 +103,38 @@ header {
     /* Neon ciánkék a TikTok logóból */
     transform: scale(1.15);
 }
+
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+        font-size: 14px; 
+    }
+    main, .team, .downloads .container, .social-icons {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+    .card, table, div[style*="width"] {
+        width: 100% !important;  
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .nav {
+        flex-direction: column !important; 
+        text-align: center;
+        width: 100%;
+    }
+    
+    .nav-item {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
