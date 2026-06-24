@@ -1,11 +1,6 @@
-:root {
-    --server-color: rgba(255, 1, 189, 0.67);
-}
-
-
 body {
     background-color: rgba(15, 15, 15, 0.92);
-    color: var(--server-color);
+    color: rgba(255, 1, 189, 0.67);
 }
 
 main a {
@@ -14,7 +9,7 @@ main a {
 }
 
 .nav {
-    background-color: var(--server-color);
+    background-color: rgba(255, 1, 189, 0.67);
 }
 
 .nav a {
@@ -48,7 +43,7 @@ header {
     background-color: rgba(15, 15, 15, 0.5);
     text-align: center;
     width: 30rem;
-    color: var(--server-color);
+    color: rgba(255, 1, 189, 0.67);
 }
 
 .adiusz-card {
