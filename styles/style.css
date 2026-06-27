@@ -115,79 +115,148 @@ header {
     /* Neon ciánkék a TikTok logóból */
     transform: scale(1.15);
 }
+/* --- SHOP ALAPSTÍLUS (Asztali nézet) --- */
+.shop-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
+.shop-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
 
-/* ==========================================
-   GLOBÁLIS MOBIL NÉZET (Csak 576px alatt!)
-   ========================================== */
-@media screen and (max-width: 576px) {
-    
+.shop-card {
+    background-color: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 30px;
+    width: 320px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    color: #fff;
+}
+
+/* Kiemelt csomag (pl. a középső) */
+.shop-card.featured {
+    border-color: #ff00ff; /* A te rózsaszín/lila színed */
+    transform: scale(1.05);
+}
+
+.shop-card:hover {
+    transform: translateY(-10px);
+    border-color: #ff00ff;
+}
+
+.shop-card h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.shop-card .price {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff00ff;
+    margin-bottom: 10px;
+}
+
+.shop-card .bonus {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.shop-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 30px 0;
+    text-align: left;
+}
+
+.shop-card ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.shop-card ul li i {
+    color: #28a745; /* Zöld pipa */
+    margin-right: 10px;
+}
+
+/* Vásárlás gomb */
+.buy-btn {
+    display: block;
+    background-color: #ff00ff;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #d600d6;
+    color: white;
+}
+
+/* Kis jelvény a kártya tetején */
+.card-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff00ff;
+    color: white;
+    padding: 3px 15px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 768px) {
     body {
         padding: 10px;
-        font-size: 14px;
+        font-size: 14px; 
     }
-
-    /* Csak a kártyák és a menü ugorjon egymás alá, a főoldal nagy elemei ne feltétlenül */
-    .team, .social-icons, .nav {
+    main, .team, .downloads .container, .social-icons {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         gap: 15px !important;
     }
-
-    /* A kártyák szélességének kezelése */
-    .card {
-        width: 100% !important;
-        max-width: 320px !important; /* Így kényelmesen elfér a legkisebb mobilon is */
-        margin: 0 auto !important;
+    .card, table, div[style*="width"] {
+        width: 100% !important;  
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
-
-    /* Táblázatok kezelése, hogy ne lógjanak ki */
-    .downloads .container, #events {
-        width: 100% !important;
-        padding: 0 10px;
-    }
-
     table {
         display: block;
         overflow-x: auto;
-        width: 100% !important;
+        white-space: nowrap;
     }
-
+    .nav {
+        flex-direction: column !important; 
+        text-align: center;
+        width: 100%;
+    }
+    
     .nav-item {
         width: 100%;
-        text-align: center;
-    }
-}
-/* ==========================================
-   KIZÁRÓLAG LAPTOP NÉZET (768px és 1200px között)
-   ========================================== */
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-    
-    body {
-        padding: 20px;
-    }
-
-    /* Példa: Laptopon a 3 kártya még elfér egymás mellett, 
-       de érdemes kicsit összébb húzni őket, hogy ne lógjanak ki */
-    .team {
-        display: flex !important;
-        flex-direction: row !important; /* Egymás mellett maradnak */
-        justify-content: center;
-        gap: 15px !important; /* Kisebb távolság köztük, mint asztalin */
-        flex-wrap: wrap; /* HA mégsem férnének el, a 3. kártya szépen leugrik alulra középre */
-    }
-
-    /* A kártyák méretének finomítása laptopra */
-    .card, .adusz-card, .wolfy-card, .rezzy-card {
-        width: 30% !important; /* Nem fix pixel, hanem a képernyő szélességének a 30%-a */
-        min-width: 250px !important; /* De 250px-nél ne legyen kisebb */
-    }
-
-    /* Letöltések és Események elrendezése laptopon */
-    /* Ha asztalin egymás mellett vannak, laptopon már jobb, ha egymás alá kerülnek */
-    .downloads, #events {
-        width: 100% !important;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
     }
 }
