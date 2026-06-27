@@ -1,19 +1,20 @@
+:root {
+    --server-color: rgba(255, 1, 189, 0.67);
+}
+
+
 body {
     background-color: rgba(15, 15, 15, 0.92);
-    color: rgba(255, 1, 189, 0.67);
+    color: var(--server-color);
 }
-html h1 {
-    background-color: transparent;
-    color: rgba(255, 1, 189, 0.67);
-}
+
 main a {
     text-decoration: none;
     font-size: large;
 }
 
 .nav {
-    /*background-color: rgba(255, 1, 189, 0.67);*/
-    background-color: blue;
+    background-color: var(--server-color);
 }
 
 .nav a {
@@ -47,7 +48,7 @@ header {
     background-color: rgba(15, 15, 15, 0.5);
     text-align: center;
     width: 30rem;
-    color: rgba(255, 1, 189, 0.67);
+    color: var(--server-color);
 }
 
 .adiusz-card {
@@ -116,7 +117,6 @@ header {
 }
 
 
-/* Nested within another conditional at-rule */
 @media screen and (max-width: 768px) {
     body {
         padding: 10px;
