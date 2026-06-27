@@ -159,3 +159,35 @@ header {
         text-align: center;
     }
 }
+/* ==========================================
+   KIZÁRÓLAG LAPTOP NÉZET (768px és 1200px között)
+   ========================================== */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    
+    body {
+        padding: 20px;
+    }
+
+    /* Példa: Laptopon a 3 kártya még elfér egymás mellett, 
+       de érdemes kicsit összébb húzni őket, hogy ne lógjanak ki */
+    .team {
+        display: flex !important;
+        flex-direction: row !important; /* Egymás mellett maradnak */
+        justify-content: center;
+        gap: 15px !important; /* Kisebb távolság köztük, mint asztalin */
+        flex-wrap: wrap; /* HA mégsem férnének el, a 3. kártya szépen leugrik alulra középre */
+    }
+
+    /* A kártyák méretének finomítása laptopra */
+    .card, .adusz-card, .wolfy-card, .rezzy-card {
+        width: 30% !important; /* Nem fix pixel, hanem a képernyő szélességének a 30%-a */
+        min-width: 250px !important; /* De 250px-nél ne legyen kisebb */
+    }
+
+    /* Letöltések és Események elrendezése laptopon */
+    /* Ha asztalin egymás mellett vannak, laptopon már jobb, ha egymás alá kerülnek */
+    .downloads, #events {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+}
