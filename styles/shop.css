@@ -181,10 +181,11 @@
 
     /* A kártyák mérete igazodjon a mobil kijelzőhöz */
     .shop-card {
-        width: 90% !important; /* Nem fix pixel, hanem a mobil kijelző 90%-a */
-        max-width: 100% !important;
-        margin: 0 auto !important;
-        transform: scale(1) !important; /* Semmiképp se növekedjen túl */
+        width: 100% !important;      /* Kötelezően kinyújtja a kártyát mobil szélességre */
+        max-width: 85vw !important;  /* Biztosítja, hogy a kijelző 85%-át foglalja el, így szép margója marad kétoldalt */
+        min-width: unset !important; /* Töröljük a korábbi esetleges fix minimum szélességet */
+        box-sizing: border-box !important;
+        margin: 0 auto 20px auto !important; /* Középre teszi a kártyákat és tesz közéjük egy kis közt */
     }
 
     .shop-card.featured {
