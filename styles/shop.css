@@ -109,3 +109,54 @@
     font-weight: bold;
     border-radius: 20px;
 }
+/* ==========================================================================
+   1. KIZÁRÓLAG LAPTOP NÉZET A SHOPHOZ (768px és 1200px között)
+   ========================================================================== */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    
+    /* Csökkentjük a kártyák közötti távolságot, hogy beférjenek laptop kijelzőre */
+    .shop-cards {
+        gap: 15px !important;
+        justify-content: center !important;
+    }
+    
+    /* A shop kártyák szélességét finomítjuk laptopra */
+    .shop-card {
+        width: 280px !important;
+    }
+    
+    /* Kikapcsoljuk a középső kártya nagyítását, nehogy rácsússzon a többire laptopon */
+    .shop-card.featured {
+        transform: scale(1) !important;
+    }
+}
+
+
+/* ==========================================================================
+   2. KIZÁRÓLAG MOBIL NÉZET A SHOPHOZ (Csak 576px alatt!)
+   ========================================================================== */
+@media screen and (max-width: 576px) {
+    
+    /* A konténer belső margóját csökkentjük, hogy több hely legyen mobilon */
+    .shop-container {
+        padding: 10px !important;
+    }
+
+    /* A kártyákat egymás ALÁ kényszerítjük */
+    .shop-cards {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+
+    /* A kártyák felveszik a mobil teljes szélességét egy biztonságos maximumig */
+    .shop-card {
+        width: 100% !important;
+        max-width: 320px !important;
+    }
+
+    /* Mobilon is kikapcsoljuk a kiemelt kártya nagyítását */
+    .shop-card.featured {
+        transform: scale(1) !important;
+    }
+}
