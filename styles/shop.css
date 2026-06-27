@@ -181,7 +181,7 @@
 
     /* A kártyák mérete igazodjon a mobil kijelzőhöz */
     .shop-card {
-        width: 90% !important; /* Nem fix pixel, hanem a mobil kijelző 90%-a */
+        width: 33% !important; /* Nem fix pixel, hanem a mobil kijelző 90%-a */
         max-width: 340px !important;
         margin: 0 auto !important;
         transform: scale(1) !important; /* Semmiképp se növekedjen túl */
