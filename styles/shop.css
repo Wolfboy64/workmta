@@ -160,35 +160,3 @@
         transform: scale(1) !important;
     }
 }
-/* ==========================================================================
-   KIZÁRÓLAG MOBIL NÉZET A SHOPHOZ (600px alatt minden telefonra!)
-   ========================================================================== */
-@media screen and (max-width: 600px) {
-    
-    .shop-container {
-        padding: 10px !important;
-        width: 100% !important;
-    }
-
-    /* A kártyákat kényszerítjük, hogy egymás alá ugorjanak */
-    .shop-cards {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 25px !important;
-        width: 100% !important;
-    }
-
-    /* A kártyák mérete igazodjon a mobil kijelzőhöz */
-    .shop-card {
-        width: 100% !important;      /* Kötelezően kinyújtja a kártyát mobil szélességre */
-        max-width: 85vw !important;  /* Biztosítja, hogy a kijelző 85%-át foglalja el, így szép margója marad kétoldalt */
-        min-width: unset !important; /* Töröljük a korábbi esetleges fix minimum szélességet */
-        box-sizing: border-box !important;
-        margin: 0 auto 20px auto !important; /* Középre teszi a kártyákat és tesz közéjük egy kis közt */
-    }
-
-    .shop-card.featured {
-        transform: scale(1) !important;
-    }
-}

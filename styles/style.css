@@ -51,21 +51,33 @@ header {
     color: var(--server-color);
 }
 
+.circle {
+    clip-path: circle(35%);
+}
+
 .adiusz-card {
     background-color: red;
     color: white;
 }
+
 .wolfy-card {
     background-color: blue;
     color: white;
 }
+
 .rezzy-card {
     background-color: green;
     color: white;
 }
+.beni-card {
+    background-color: yellow;
+    color: blue;
+}
 .team {
     color: white;
+    text-align: center;
 }
+
 .div-top-border {
     border-top: 10px;
     border-bottom: 0px;
@@ -73,6 +85,10 @@ header {
     border-right: 0px;
     border-style: double;
     border-color: rgba(255, 1, 189, 0.67);
+}
+.soon {
+    color: red;
+    text-decoration: underline;
 }
 /* */
 .social-icons {
@@ -120,31 +136,40 @@ header {
 @media screen and (max-width: 768px) {
     body {
         padding: 10px;
-        font-size: 14px; 
+        font-size: 14px;
     }
-    main, .team, .downloads .container, .social-icons {
+
+    main,
+    .team,
+    .downloads .container,
+    .social-icons {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         gap: 15px !important;
     }
-    .card, table, div[style*="width"] {
-        width: 100% !important;  
+
+    .card,
+    table,
+    div[style*="width"] {
+        width: 100% !important;
         max-width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
+
     table {
         display: block;
         overflow-x: auto;
         white-space: nowrap;
     }
+
     .nav {
-        flex-direction: column !important; 
+        flex-direction: column !important;
         text-align: center;
         width: 100%;
     }
-    
+
     .nav-item {
         width: 100%;
         margin-bottom: 5px;
